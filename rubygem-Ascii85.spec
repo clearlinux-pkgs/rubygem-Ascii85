@@ -4,7 +4,7 @@
 #
 Name     : rubygem-Ascii85
 Version  : 1.0.2
-Release  : 8
+Release  : 9
 URL      : https://rubygems.org/downloads/Ascii85-1.0.2.gem
 Source0  : https://rubygems.org/downloads/Ascii85-1.0.2.gem
 Summary  : No detailed summary available
@@ -16,7 +16,6 @@ BuildRequires : rubygem-bundler
 BuildRequires : rubygem-minitest
 BuildRequires : rubygem-rake
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-test-unit
 
 %description
 = Ascii85
@@ -63,34 +62,25 @@ fi
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
-pushd %{buildroot}%{gem_dir}/gems/Ascii85-1.0.2
-rake --trace test TESTOPTS="-v"
-popd
+export no_proxy=localhost
+pushd %{buildroot}%{gem_dir}/gems/Ascii85-1.0.2 && rake --trace test TESTOPTS="-v" && popd
 
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/Ascii85-1.0.2.gem
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/Ascii85/DecodingError/cdesc-DecodingError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/Ascii85/cdesc-Ascii85.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/Ascii85/decode-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/Ascii85/encode-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/page-LICENSE.ri
-/usr/lib64/ruby/gems/2.2.0/doc/Ascii85-1.0.2/ri/page-README_rdoc.ri
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/.gemtest
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/Ascii85.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/History.txt
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/LICENSE
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/README.rdoc
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/bin/ascii85
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/lib/Ascii85/version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/lib/ascii85.rb
-/usr/lib64/ruby/gems/2.2.0/gems/Ascii85-1.0.2/spec/lib/ascii85_spec.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/Ascii85-1.0.2.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/Ascii85-1.0.2.gem
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/.gemtest
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/Ascii85.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/History.txt
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/LICENSE
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/README.rdoc
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/bin/ascii85
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/lib/Ascii85/version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/lib/ascii85.rb
+/usr/lib64/ruby/gems/2.3.0/gems/Ascii85-1.0.2/spec/lib/ascii85_spec.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/Ascii85-1.0.2.gemspec
 
 %files bin
 %defattr(-,root,root,-)

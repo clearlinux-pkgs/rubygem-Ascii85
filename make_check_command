@@ -1,0 +1,1 @@
+pushd %{buildroot}%{gem_dir}/gems/Ascii85-1.0.2 && rake --trace test TESTOPTS="-v" && popd
