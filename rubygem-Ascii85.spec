@@ -4,7 +4,7 @@
 #
 Name     : rubygem-Ascii85
 Version  : 1.0.2
-Release  : 11
+Release  : 12
 URL      : https://rubygems.org/downloads/Ascii85-1.0.2.gem
 Source0  : https://rubygems.org/downloads/Ascii85-1.0.2.gem
 Summary  : No detailed summary available
@@ -38,6 +38,7 @@ gem unpack %{SOURCE0}
 gem spec %{SOURCE0} -l --ruby > rubygem-Ascii85.gemspec
 
 %build
+export LANG=C
 gem build rubygem-Ascii85.gemspec
 
 %install
@@ -60,6 +61,7 @@ cp -pa .%{_bindir}/* \
 fi
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
